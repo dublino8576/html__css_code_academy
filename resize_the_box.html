@@ -69,4 +69,60 @@
       <div class="box vwvh-box">Box using <strong>vw/vh</strong></div>
     </div>
   </body>
-</html>
+  <!--
+    1. Which CSS unit would you use for a responsive layout and why?
+        I would use vw and vh as they respond to the device screen for the main elements in the page. Going down the
+        DOM I would use % for the children elements.
+
+        I can use REM for making sure that the text increases if 
+        the root measure increases (if a user has made their browser set to bigger character it will scale accordingly in their case, making it accessible).
+    
+    2. How do em and rem units differ when changing parent or root font size?
+        Rem is more consistent as it relates to root level of 
+        the DOM, whilst em is more volatile as it depends to
+        the its parent size but it is useful for reusability of
+        components in the website. Em is more design friendly
+        whilst rem is more accessible friendly as it changes with
+        each user experience browser root settings
+
+    3. What happens to elements using vw and vh when you resize the browser window?
+        The content adapts to the viewport size, even the text 
+        scales up and down (cannot use it if it's inline dislpay
+        but in this case the text is inside a div block element).
+        If I set a width for the .container that is smaller than
+        viewport width so that the block element div.container
+        does not fill the full width, then the .vwvh-box can 
+        extend past the .container itself, so it doesn't consider
+        its parent element size.
+    
+    4.  Why might fixed pixel units be less ideal for mobile design?
+        If the set px are too large for smaller mobile screens
+        it can change the whole layout of the page and the user
+        would have to scroll to view something that doesn't take
+        much space on a pc.
+        If the user has settings for text size, it won't respect it.
+        Use vh,vw, rem when starting a page and em for child elements, this will avoid text or elements become blurry
+        on screens with less pixels resolutions like 360px screens.
+        Text in pixels could also break out of a div parent in
+        small screens.
+
+    5.  In your own words, explain when you would use each of the following units: px, %, em, rem, vw, vh.
+        Pixels: I would use them with elements that don't need
+            scaling. If I have small borders or icons, for precision.
+            Also images need to be in px or they can get blurry
+            and lose their definition. 
+        Rem: I would use it for anything that needs scaling 
+        typography included. Right after the root size has been 
+        set I would use rem for the main elements of the DOM, 
+        especially typography.
+        Em: I would use em for components that are descendant or
+        children of another where I need to build consistency and
+        reusability of the whole block across the web application. Typography for small UI components like
+        buttons.
+        %: I would use it as I need to adapt an element inside a
+        container but I need symmetry to matter with its parent
+        element.
+        vw/vh: I would use it to build consistency across multiple devices, for exaple for defining the body of the page and have the content within a certain margin 
+        from the edge of the screen. It would be used for large
+        components that are at the top of the DOM in this instance.
+--></html>
